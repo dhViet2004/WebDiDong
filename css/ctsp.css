@@ -1,0 +1,219 @@
+.checked {
+    color: #f59e0b;
+  }
+
+ .carousel-item
+ {
+    height: 100%;
+ }
+
+.carousel-indicators img
+{
+  width: 100px;
+  display: block;
+}
+
+.carousel-indicators button
+{
+  width: max-content!important;
+}
+
+.carousel-indicators
+{
+   position: unset;
+}
+
+.carousel-indicators button.active img
+{
+   border: 2px solid rgb(159, 212, 255);
+}
+
+
+#phienBan {
+   display: flex; /* sắp xếp mấy cái phần tử li theo chiều ngang */
+   list-style-type: none;
+   padding: 0;
+ }
+ 
+#phienBan li
+{
+   flex: 1; 
+}
+
+ #phienBan li button{
+   background-color: white;
+   text-align: center;
+   border: 1px solid black;
+   border-radius: 50px;
+   width: 90%;
+ }
+ 
+ #phienBan li button:focus{
+   border: 1px solid rgb(159, 212, 255);
+   color: rgb(159, 212, 255);
+ }
+
+ #phienBan1 {
+   display: flex; /* sắp xếp mấy cái phần tử li theo chiều ngang */
+   list-style-type: none;
+   padding: 0;
+ }
+ 
+#phienBan1 li 
+{
+   flex: 1;
+}
+
+.colorButton
+{
+  object-fit: cover; /*Thuộc tính object-fit được sử dụng với mục đích thay đổi kích thước của <img> hay <video> sao cho phù hợp với vùng chứa nó.*/
+  overflow: hidden; /* là một giá trị cụ thể của thuộc tính overflow trong CSS, dùng để xác định cách xử lý nội dung bị tràn trong một phần tử HTML.*/
+}
+
+ #phienBan1 li button{
+   background-color: white;
+   text-align: center;
+   border: 1px solid black;
+   border-radius: 50px;
+   width: 90%;
+ }
+ 
+ #phienBan1 li button:focus{
+   border: 1px solid rgb(159, 212, 255);
+   color: rgb(159, 212, 255);
+ }
+
+
+ .cart-icon span {
+   color: rgb(159, 212, 255);
+   padding-left: 57px;
+   font-size: 40px;
+   width: 100%;
+ }
+ 
+ .cart-icon span:hover {
+   color: #0055a5;
+ }
+
+ #btn button
+ {
+   color: rgb(159, 212, 255);
+   background-color: white;
+   border: 1px solid rgb(159, 212, 255);
+   border-radius: 50px;
+   width: 100%;
+   height: 50px;  
+ }
+
+ #btn button:hover 
+ {
+   color: white;
+   background-color: rgb(159, 212, 255);
+ }
+
+ #borderOut
+ {
+   border: 1px solid rgb(225, 225, 225);
+   border-radius: 20px;
+ }
+
+ #btnModal
+ {
+   width: 100%;
+   height: 40px;
+   background-color: white;
+   border:1px solid rgb(159, 212, 255);
+   border-radius: 20px;
+   color: rgb(159, 212, 255)  ;
+ }
+
+ #btnModal:hover
+ {
+   background-color: rgb(159, 212, 255);
+   color: white;
+ }
+
+ .modal-body img
+ {
+   margin-left: 50px;
+ }
+
+ #btnClose
+ {
+   width: 100%;
+   height: 40px;
+   background-color: white;
+   border:1px solid rgb(159, 212, 255);
+   border-radius: 20px;
+   color: rgb(159, 212, 255)  ;
+ }
+
+ #btnClose:hover
+ {
+   background-color: rgb(159, 212, 255);
+   color: white;
+ }
+
+ .w-100.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.color-blue{
+  background: linear-gradient(180deg,  rgb(198, 224, 255),rgb(255, 255, 255));
+}
+.blue{
+  background-color:  rgb(198,224,255);
+}
+.thea{
+  width: 10%;
+}          
+
+#sptt {
+  flex-wrap: nowrap; /*chặn không có xuống dòng của các coll */
+  overflow-x: auto; /* Tạo thanh cuộn ngang nếu nội dung vượt quá kích thước */
+}
+
+.card img
+{
+  transition: transform 0.5s ease; /*tạo hiệu ứng mượt mà*/
+}
+
+.card:hover img
+{
+  transform: scale(1.05); /* Phóng to ảnh lên 105% khi hover */
+}
+
+.textUnder
+{
+  text-decoration: none;
+}
+
+footer {
+  height: 5%;
+  width: 100%;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer  img {
+  width: 2%;
+}
+
+footer .login-google{
+  height: 34px;
+  width: 34px;
+}
+
+#thanhTrangChu
+{
+  box-shadow: 0px 5px 8px lightgray;
+}
+
+#iconHomeBlue
+{
+  width: 25px;
+  height: 25px;
+  float: left;
+}

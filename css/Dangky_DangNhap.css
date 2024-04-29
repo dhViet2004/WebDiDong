@@ -1,0 +1,27 @@
+.login-google{
+    height: 34px;
+    width: 34px;
+}
+.link-DangKy{
+    text-decoration: none;
+}
+.link-Google-facebook{
+    text-decoration: none;
+    color: black;
+}
+.color-blue{
+    background: linear-gradient(180deg,  rgb(198, 224, 255),rgb(255, 255, 255));
+}
+.blue{
+    background-color: rgb(198, 224, 255);
+}
+.thea{
+    width: 10%;
+}
+section{
+    background-color: rgb(198, 224, 255);
+    border-radius: 20px;
+}
+span{
+    color: red;
+}

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="icon" href="../images/icon/logo.png" type="image/png">
+    <!--link để lấy icon có sẵn của gg -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../js/CT_SanPham.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/datajson.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/ctsp.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <style>
+        #stickyBottomBar {
+            top: auto;
+            background-color: #fff;
+            border: 1px solid rgba(145, 158, 171, .239);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            bottom: 0;
+            /* Đặt vị trí bắt đầu từ dưới cùng của phần tử cha */
+            box-shadow: 0 -4px 20px -1px rgba(40, 124, 234, .15);
+            display: flex;
+            justify-content: space-between;
+            left: 50%;
+            margin: auto;
+            max-width: 600px;
+            padding: 10px 10px 15px;
+            /* position: fixed;
+            transform: translateX(-50%); */
+            width: 100%;
+            z-index: 11;
+            bottom: 0;
+            /* Đặt vị trí bắt đầu từ phía dưới của #giohang */
+        }
+
+
+        .buttons_added {
+            opacity: 1;
+            display: inline-block;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            white-space: nowrap;
+            vertical-align: top;
+        }
+
+        .is-form {
+            overflow: hidden;
+            position: relative;
+            background-color: #f9f9f9;
+            height: 2.2rem;
+            width: 1.9rem;
+            padding: 0;
+            text-shadow: 1px 1px 1px #fff;
+            border: 1px solid #ddd;
+        }
+
+        .is-form:focus,
+        .input-text:focus {
+            outline: none;
+        }
+
+        .is-form.minus {
+            border-radius: 4px 0 0 4px;
+            color: black;
+        }
+
+        .is-form.plus {
+            border-radius: 0 4px 4px 0;
+            color: black;
+        }
+
+        .input-qty {
+            background-color: #fff;
+            height: 2.2rem;
+            text-align: center;
+            font-size: 1rem;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            border-left: 0;
+            border-right: 0;
+            padding: 0;
+        }
+
+        .input-qty::-webkit-outer-spin-button,
+        .input-qty::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .tensanpham {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #giohang {
+            background-color: #fff;
+            border: 1px solid rgba(145, 158, 171, .239);
+
+
+
+
+            justify-content: space-between;
+            left: 50%;
+
+            max-width: 600px;
+            padding: 10px 10px 15px;
+            position: relative;
+            transform: translateX(-50%);
+
+
+            margin-bottom: 100px;
+        }
+
+        .btn-danger {
+            border-color: #ffffff;
+            /* Màu đỏ */
+            /* Màu đỏ */
+        }
+    </style>
+    <script>
+        // Lấy giỏ hàng từ localStorage
+        var currentUserJSON = localStorage.getItem('currentUser');
+
+        // Chuyển đổi dữ liệu từ chuỗi JSON thành đối tượng JavaScript
+        var currentUser = JSON.parse(currentUserJSON);
+        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        $(document).ready(function () {
+            showCart();
+            // Gọi hàm calculateTotal khi trang được tải
+
+            calculateTotal();
+            $("#selectAll").click(function () {
+
+                // Kiểm tra xem check box "Chọn Tất Cả" có được chọn không
+                var isChecked = $(this).prop("checked");
+
+                // Lặp qua tất cả các check box khác trong giỏ hàng
+                $("input[name='selectedProduct']").each(function () {
+                    // Đặt trạng thái chọn của check box tương ứng giống với check box "Chọn Tất Cả"
+                    $(this).prop("checked", isChecked);
+                    calculateTotal();
+                });
+            });
+            $("#gohome1").click(function (e) {
+                window.location.href = "home.html";
+
+            });
+        });
+
+        function showCart() {
+            var cartList = $("#giohang");
+
+            cartList.empty();
+            if (cart.length === 0) {
+                cartList.append("<tr><td colspan='6'><img src='../images/giohang/empty-cart.jpg' alt=''></td></tr>");
+                $("#gohome").html(" <tr><td class='d-grid gap-2'><button type='button' class='btn btn-danger btn-block'id='gohome1'>Quay lại Mua Hàng</button></td></tr>");
+            } else {
+                cart.forEach(function (item, index) {
+                    // Kiểm tra nếu sản phẩm thuộc về người dùng hiện tại thì mới hiển thị
+                    if (item.maKH === currentUser.id) {
+                        var checkboxColumn = "<td><input type='checkbox' name='selectedProduct' value='" + index + "'></td>";
+                        var imgColumn = "<td><a href='#' class='tensanpham' onclick='setMasp(" + item.masp + ")'><img src='" + item.img + "' alt=''></a></td>";
+                        var namePriceRow = "<td><a href='#' class='tensanpham' onclick='setMasp(" + item.masp + ")'>" + item.name + "</a><br><p>Màu sắc: " + item.color + "</p><p>Giá: <span style='color: red;'>" + item.price + "</span></p></td>";
+                        var quantityInputColumn = "<td><div class='buttons_added'>" +
+                            "<button class='btn btn-secondary minus is-form'>-</button>" +
+                            "<input aria-label='quantity' class='input-qty' max='999' min='1' name='' type='number' value='" + item.quantity + "'>" +
+                            "<button class='btn btn-secondary plus is-form'>+</button></div></td>";
+
+                        var deleteButtonColumn = "<td style='text-align: right; position: relative;'><button class='btn btn-danger btn-sm delete-btn' data-masp='" + item.masp + "' style='position: absolute; bottom: 0; right: 0;'><i class='fa fa-trash' aria-hidden='true'></i></button></td>";
+
+                        var li = "<tr>" + checkboxColumn + imgColumn + namePriceRow + quantityInputColumn + deleteButtonColumn + "</tr>";
+
+                        cartList.append(li);
+                    }
+                });
+            }
+        }
+
+        // Xử lý sự kiện khi nhấn nút Thanh toán
+        $("#checkout-btn").click(function () {
+            alert("Xin lỗi, chức năng thanh toán chưa được triển khai!");
+        });
+
+        // Xử lý sự kiện khi nhấn nút Xóa
+        $(document).on("click", ".delete-btn", function () {
+            var masp = $(this).data("masp"); // Lấy mã sản phẩm từ thuộc tính data-masp
+            var index = cart.findIndex(item => item.masp === masp); // Tìm chỉ số của sản phẩm trong mảng cart
+            if (index !== -1) {
+                cart.splice(index, 1); // Xóa sản phẩm khỏi giỏ hàng
+                localStorage.setItem("cart", JSON.stringify(cart)); // Cập nhật giỏ hàng trong local storage
+                showCart(); // Hiển thị lại giỏ hàng sau khi xóa
+            }
+        });
+        $(document).on("click", ".plus.is-form", function () {
+
+            var $inputQty = $(this).siblings('.input-qty');
+            var currentValue = parseInt($inputQty.val());
+            var max = parseInt($inputQty.attr('max'));
+            if (currentValue < max) {
+                $inputQty.val(currentValue + 1);
+
+                updateCartQuantity($inputQty);
+            }
+        });
+
+        $(document).on("click", ".minus.is-form", function () {
+            var $inputQty = $(this).siblings('.input-qty');
+            var currentValue = parseInt($inputQty.val());
+            var min = parseInt($inputQty.attr('min'));
+            if (currentValue > min) {
+                $inputQty.val(currentValue - 1);
+                updateCartQuantity($inputQty);
+            }
+        });
+
+        $(document).on("change", ".input-qty", function () {
+            updateCartQuantity($(this));
+        });
+
+        function updateCartQuantity($inputQty) {
+            var index = $inputQty.closest("tr").index();
+            var newQuantity = parseInt($inputQty.val());
+            cart[index].quantity = newQuantity;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            showCart();
+        }
+        // Tạo một hàm để tính tổng tiền của các sản phẩm được chọn
+        function calculateTotal() {
+            var total = 0;
+
+            // Lặp qua tất cả các sản phẩm trong giỏ hàng
+            $("#giohang tr").each(function () {
+                var checkbox = $(this).find("input[name='selectedProduct']");
+
+                // Kiểm tra xem sản phẩm có được chọn không
+                if (checkbox.is(":checked")) {
+                    var index = checkbox.val(); // Chỉ số của sản phẩm trong giỏ hàng
+                    var item = cart[index]; // Sản phẩm tương ứng trong giỏ hàng
+                    var quantity = item.quantity; // Số lượng của sản phẩm
+                    var price = parseFloat(item.price.replace(/\D/g, '')); // Giá của sản phẩm (chuyển đổi từ chuỗi sang số)
+
+                    // Tính tổng tiền của sản phẩm và cộng vào tổng tiền
+                    total += quantity * price;
+                }
+            });
+
+            var formattedTotal = total.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            $("#total").text(formattedTotal);
+
+        }
+
+
+
+        // Gọi hàm calculateTotal khi có sự kiện thay đổi trong checkbox
+        $(document).on("change", "input[name='selectedProduct']", function () {
+            calculateTotal();
+        });
+        function setMasp(masp) {
+
+            localStorage.setItem("masp", masp);
+            window.location.href = "ChiTietSanPham.html";
+        }
+        $(document).on("click", "#checkout-btn", function () {
+            var selectedProducts = [];
+
+            // Lặp qua tất cả các sản phẩm trong giỏ hàng
+            $("#giohang tr").each(function () {
+                var checkbox = $(this).find("input[name='selectedProduct']");
+
+                // Kiểm tra xem sản phẩm có được chọn không
+                if (checkbox.is(":checked")) {
+                    var index = checkbox.val(); // Chỉ số của sản phẩm trong giỏ hàng
+                    var item = cart[index]; // Sản phẩm tương ứng trong giỏ hàng
+                    selectedProducts.push(item); // Thêm sản phẩm được chọn vào danh sách
+                }
+            });
+
+            // Kiểm tra nếu không có sản phẩm nào được chọn
+            if (selectedProducts.length === 0) {
+                alert("Vui lòng chọn ít nhất một sản phẩm để thanh toán.");
+            } else {
+                // Lưu danh sách sản phẩm được chọn vào localStorage (nếu cần)
+                localStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));
+
+                // Chuyển hướng người dùng đến trang thanh toán
+                window.location.href = "checkout.html";
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-light blue">
+        <div class="container-fluid">
+            <a class="navbar-brand thea" href="home.html"><img src="../images/iconDSDT/Untitled-2.png" alt="Logo"
+                    class="w-100"></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item dropdown ms-5 w-100">
+                        <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
+                            điểm</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">TP.HCM</a></li>
+                            <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
+                            <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                        </ul>
+                    </li>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                            aria-describedby="search-button">
+                        <button class="btn btn-outline-primary" type="button" id="search-button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <li class="nav-item w-100">
+                        <a class="nav-link w-100" id="user" href="DangNhap.html">
+                            <i class="fa fa-user btn" aria-hidden="true"></i>
+                            <span id="htmlDangNhap"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100">
+                        <a class="nav-link w-100" href="#">
+                            <i class="fa fa-shopping-cart btn "></i>
+                            Giỏ Hàng
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    </div>
+    <div class="container ">
+
+        <table id="giohang" class="table table-bordered">
+
+        </table>
+
+    </div>
+
+
+    <div class="footer">
+        <div id="stickyBottomBar" class="d-flex flex-column align-items-stretch">
+            <table class="" id="gohome">
+                <tr>
+
+                    <td>
+                        <form action="">
+                            <input type="checkbox" id="selectAll" name="selectAll" value="All">
+                            <label for="selectAll"> Chọn Tất Cả</label>
+                        </form>
+                    </td>
+
+                    <td>
+                        <div class="znJ7TE">Tổng thanh toán :</div>
+                        <div><span id="total" style="color: red;">₫0</span></div>
+                    </td>
+                    <td class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                        <button class="btn btn-danger me-md-2" type="button" id="checkout-btn">Thanh Toán</button>
+
+                    </td>
+                </tr>
+            </table>
+            <table class="">
+
+            </table>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+<script src="../js/fillName.js"></script>
+
+</html>

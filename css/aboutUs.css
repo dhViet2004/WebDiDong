@@ -1,0 +1,233 @@
+header {
+    height: 5%;
+  }
+
+  .thea{
+    width: 10%;
+}
+
+footer {
+    height: 5%;
+    width: 100%;
+  }
+  footer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer  img {
+    width: 2%;
+  }
+
+  footer .login-google{
+    height: 34px;
+    width: 34px;
+}
+
+.blue{
+  background-color:  rgb(198,224,255);
+}
+
+
+
+
+.containerr{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.taoNen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 255, 255,1), rgba(255, 255, 255, 0)); /* Gradient từ trong suốt đến màu trắng */
+    mix-blend-mode: screen; /* Kết hợp màu của background với ảnh */
+}
+.bag{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.bag img{
+    display: block;
+    width: 100%;
+    height: 700px;
+}
+
+.content{
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    width: 50%;
+    max-height: 100%;
+    padding: 20px;
+    overflow: visible;
+    margin: 0 auto; /* Canh giữa phần content */
+    /* overflow: hidden; */
+}
+
+.thuongHieu{
+    width: 100%;
+    height: 200px;
+}
+.thuongHieu img{
+    width: 100%;
+    height: 100%;
+}
+.brand-listt{
+    width: 75%;
+}
+.brand-listt a img{
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+.containerr {
+    position: relative;
+    width: 100%;
+}
+
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.inner-content {
+    padding-bottom: 20px;
+}
+
+.inner-content a {
+    font-size: 40px;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+    font-family: 'Dancing Script';
+}
+
+.inner-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+
+}
+.banDo{
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.inner-number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.number h2{
+    text-align: center;
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 20px;
+}
+.number{
+    background: #ECECEC;
+    padding: 20px;
+}
+.number-box{
+    width: 130px;
+    height: 130px;
+    border: 3px solid rgb(159, 212, 255);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: white;
+}
+.number-box span{
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.number-content{
+    line-height: 150%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+.number-row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/* Định nghĩa Media Queries cho màn hình có kích thước nhỏ hơn 768px */
+@media (max-width:  1200px) {
+   
+        .inner-content p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+    .content {
+        width: 80%;
+        left: 10%; 
+    }
+}
+
+
+@media (max-width:  1000px) {
+   
+    .brand-listt a img{
+        width: 100px;
+        height: 40px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    
+.content {
+    width: 60%;
+    left: 10%; 
+}
+}
+@media (max-width:  870px) {
+
+.content {
+    width: 80%;
+    left: 10%; 
+}
+}
+@media (max-width:  800px) {
+
+
+    .inner-content a{
+        font-size: 20px;
+    }
+   
+    .brand-listt a img{
+        width: 50px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .thuongHieu{
+        width: 70%;
+    }
+    
+.content {
+    width: 60%;
+    left: 10%; 
+    height: 600px;
+    top: 0px;
+}
+}
+

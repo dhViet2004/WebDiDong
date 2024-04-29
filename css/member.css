@@ -1,0 +1,184 @@
+header {
+    height: 5%;
+  }
+
+  .thea{
+    width: 10%;
+}
+
+footer {
+    height: 5%;
+    width: 100%;
+  }
+  footer a {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer  img {
+    width: 2%;
+  }
+
+  footer .login-google{
+    height: 34px;
+    width: 34px;
+}
+
+.blue{
+  background-color:  rgb(198,224,255);
+}
+
+
+
+header h1{
+    text-align: center;
+    text-shadow: 7px 5px 5px rgb(19 104 195);
+    color: white;
+    font-weight: bold;
+    font-size: 500%;
+    }
+  
+  body{
+    display: flex;
+  }
+
+  .overlay-container{
+    width: 200px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+  .overlay-text{
+    background: rgba(255, 85, 85,0.85);
+    padding: 0px 10px;
+    position: absolute;
+    bottom: -65px;
+    width: 100%;
+    color: #fff;
+    /* opacity: 1; */
+  }
+  /* .overlay-container:hover .overlay-text{
+    bottom: 0px;
+    transition: all 0.5s all ease-in-out;
+    opacity: 1;
+  } */
+  .card{
+    width: 500px;
+    height: 320px;
+    align-items: center;
+    position: relative;
+    margin: 5px;
+    background-color: #C6E0FF;
+  }
+  .card-img{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .card-img-top{
+    border: 5px solid #00B2F0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  .card-title{
+    font-size: 25px;
+  }
+  .card_social{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+/* chat */
+
+.card-img img {
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out; /* Áp dụng hiệu ứng chuyển đổi kích thước */
+  }
+  
+  .fa-brands{
+      padding: 5px;
+      background: white;
+      border-radius: 5px;
+      border: 1px solid #00B2F0;
+      color: #00B2F0;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444); /* Thêm đổ bóng */
+  }
+  .fa-brands:hover{
+    transform: scale(1.2);
+  }
+  
+  .card-img:hover{
+    width: 100%; /* Đặt chiều rộng của .card-img là 100% khi hover */
+    height: 100%; /* Đặt chiều cao của .card-img là 100% khi hover */
+    padding-top: 0px;
+  }
+  .card-img:hover img{
+    border-radius: unset; /* Bỏ viền cong nếu có */
+    border: none; /* Bỏ viền nếu có */
+    border-radius: none;
+    transition: 0.8s;
+  }
+  .card-img:hover + .card-body,
+  .card-img:hover + .card-social,
+  .card-img:hover + .btn-body {
+    opacity: 0; /* Ẩn đi các phần tử khi hover vào ảnh */
+    visibility: hidden; /* Ẩn đi các phần tử khi hover vào ảnh */
+  }
+  .overlay-text {
+    background: rgba(255, 85, 85, 0.85);
+    padding: 0px 10px;
+    position: absolute;
+    bottom: -85px; /* Di chuyển overlay-text lên trên để ẩn đi */
+    width: 100%;
+    color: #fff;
+    visibility: hidden; /* Ẩn overlay-text ban đầu */
+    transition: all 0.5s ease-in-out; /* Thêm hiệu ứng chuyển đổi */
+  }
+  
+  .card-img:hover + .overlay-text {
+    visibility: visible; /* Hiển thị overlay-text khi hover vào ảnh */
+    bottom: 20px; /* Di chuyển overlay-text xuống dưới ảnh khi hover */
+  }
+
+section{
+    display: flex;
+}
+body {
+    background-color: #ECF6FC;
+    display: flex;
+    flex-direction: column;
+}
+.card-img:hover ~ .card-body {
+    visibility: hidden; /* Ẩn phần tử .card-body khi hover vào ảnh trong .card-img */
+    position: absolute; /* Đảm bảo phần tử ẩn đi không chiếm không gian trong layout */
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 20%;
+  justify-content: center;
+  width: 900px;
+}
+
+
+
+.btn-body{
+  color: #00B2F0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+  background: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.444); /* Thêm đổ bóng */
+  background: white;
+  color: #00B2F0;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  width: 960px;
+}
+

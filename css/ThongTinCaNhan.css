@@ -1,0 +1,62 @@
+
+.login-google{
+    height: 34px;
+    width: 34px;
+}
+.link-DangKy{
+    text-decoration: none;
+}
+.link-Google-facebook{
+    text-decoration: none;
+    color: black;
+}
+.color-blue{
+    background: linear-gradient(180deg,  rgb(198, 224, 255),rgb(255, 255, 255));
+}
+.blue{
+    background-color: rgb(198, 224, 255);
+}
+.thea{
+    width: 10%;
+}
+.artical1{
+    width: 30%;
+    border-radius: 5px;
+    background: rgb(198, 224, 255);
+    float: left;
+}
+.artical1 a{
+    color: black;
+}
+.infor{
+    width: 100%;
+    height: 466px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.artical2{
+    width: 70%;
+    height: 650px;
+    float: left;
+}
+.donhang{
+    border-right: 2px solid black;
+}
+.menu1{
+    border-radius:10px ;
+}
+section{
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(180deg,  rgb(198, 224, 255),rgb(255, 255, 255));
+    font-size: 150%;
+}
+footer{
+    clear: both;
+}
+.tuVan {
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-right: 10px;
+}

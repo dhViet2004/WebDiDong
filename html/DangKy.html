@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="icon" href="../images/icon/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/Dangky_DangNhap.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap"
+    />
+    <script src="../bs/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-latest.js"></script>
+  </head>
+
+  <body>
+    <div class="container-sm-fluid color-blue">
+      <header>
+        <nav class="navbar navbar-expand-xl navbar-light blue">
+          <a class="navbar-brand thea" href="home.html"
+            ><img src="../images/icon/Untitled-2.png" alt="Logo" class="w-100 ms-3"
+          /></a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mynavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown ms-5 w-100">
+                <a
+                  class="nav-link dropdown-toggle w-50"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Địa điểm</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">TP.HCM</a></li>
+                  <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
+                  <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                </ul>
+              </li>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-button"
+                />
+                <button
+                  class="btn btn-outline-primary"
+                  type="button"
+                  id="search-button"
+                >
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+
+              <li class="nav-item w-100">
+                <a class="nav-link w-100" href="DangNhap.html">
+                  <i class="fa fa-user btn" aria-hidden="true"></i>
+                  Đăng nhập
+                </a>
+              </li>
+              <li class="nav-item w-100">
+                <a class="nav-link w-100" href="giohang.html">
+                  <i class="fa fa-shopping-cart btn"></i>
+                  Giỏ Hàng
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="container bg-light shadow w-50 mt-5 pt-4 mb-5">
+        <h1 class="text-center">Chào mừng bạn đến với DiDong.vn</h1>
+        <h3 class="text-danger text-center">Đăng ký tài khoản</h3>
+        <div class="container mt-5">
+          <form>
+            <table class="w-100">
+              <tr>
+                <td>
+                    <span id="erHoTen" class="ms-3"></span>
+                  <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
+                  <div class="form-floating">
+                    <input type="text" class="form-control border-0 border-bottom" id="inputHoTen" placeholder=" " required/>
+                    <label for="inputHoTen" id="inputLabel1">Nhập họ và tên</label >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span id="erSDT" class="ms-3"></span>
+                  <div class="form-floating">
+                    <input type="text" class="form-control border-0 border-bottom" id="inputSDT" placeholder=" " required/>
+                    <label for="inputSDT" id="inputLabel2">Nhập số điện thoại</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span id="erEmail" class="ms-3"></span>
+                  <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
+                  <div class="form-floating">
+                    <input type="text" class="form-control border-0 border-bottom" id="inputEmail" placeholder=" "/>
+                    <label for="inputEmail" id="inputLabel3">Nhập email (Không bắt buộc)</label>
+                    <small class="form-text text-muted text-start ms-3">Hóa đơn VAT khi mua hàng sẽ được gửi qua mail này</small >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span id="erPW" class="ms-3"></span>
+                  <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
+                  <div class="form-floating">
+                    <input type="password" class="form-control border-0 border-bottom" id="inputMatKhau" placeholder=" "required/>
+                    <label for="inputMatKhau" id="inputLabel4">Nhập mật khẩu</label>
+                    <small class="form-text text-muted ms-3">(*)Mật khẩu tối thiểu 6 ký tự, có ít nhất 1 chữ và 1 số.(VD: 12345a)</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span id="erPW2" class="ms-3"></span>
+                  <!--tạo hiệu ứng label float lên trên input khi có dữ liệu nhập vào -->
+                  <div class="form-floating">
+                    <input type="password" class="form-control border-0 border-bottom" id="inputMatKhau2" placeholder=" " required/>
+                    <label for="inputMatKhau2" id="inputLabel5">Nhập lại mật khẩu</label>
+                    <small class="form-text text-muted ms-3">(*)Nhập lại mật khẩu phải giống với mật khẩu trên.</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="form-check-label  text-muted"
+                    ><input type="checkbox" class="me-3" id="cbxBanTin" />Đăng ký nhận bản tin khuyến mãi từ DiDong.vn</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="form-check-label  text-muted"
+                    ><input type="checkbox" class="me-3" id="cbxDongY" />Tôi đồng ý với các điều khoảng bảo mật cá nhân</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary w-100 pt-3 pb-3 mt-3" id="btnDangKy" disabled> Đăng ký</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+          <div class="row mt-5">
+            <div class="col">
+              <hr />
+            </div>
+            <div class="col-auto">
+              <p class="text-center">hoặc đăng nhập bằng</p>
+            </div>
+            <div class="col">
+              <hr />
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <div class="login-google d-flex">
+                <img src="../images/icon/Google.png" alt="Google" class="w-100" />
+                <p class="mt-1 ms-1">
+                  <a href="#" class="link-Google-facebook">Google</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="login-google d-flex">
+                <img src="../images/icon/facebook.png" alt="" class="w-100" />
+                <p class="mt-1 ms-1">
+                  <a href="#" class="link-Google-facebook">Facebook</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-5">
+            <div class="col-6 text-center">
+              <p>
+                Bạn đã có tài khoản?
+                <a href="DangNhap.html" class="link-DangKy"><b class="text-danger">Đăng nhập ngay</b></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+   
+    <script src="../js/dangKy.js"></script>
+  </body>
+</html>
