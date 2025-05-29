@@ -1,0 +1,40 @@
+[
+    {
+        "Id": "01",
+        "Name": "Thành phố Hồ Chí Minh",
+        "Districts": [
+            {
+                "Id": "001",
+                "Name": "Quận 1",
+                "Wards": [
+                    {
+                        "Id": "00001",
+                        "Name": "Phường Bến Nghé",
+                        "Level": "Phường"
+                    },
+                    {
+                        "Id": "00002",
+                        "Name": "Phường Cầu Kho",
+                        "Level": "Phường"
+                    }
+                ]
+            },
+            {
+                "Id": "002",
+                "Name": "Quận 3",
+                "Wards": [
+                    {
+                        "Id": "00003",
+                        "Name": "Phường 7",
+                        "Level": "Phường"
+                    },
+                    {
+                        "Id": "00004",
+                        "Name": "Phường 10",
+                        "Level": "Phường"
+                    }
+                ]
+            }
+        ]
+    }
+]

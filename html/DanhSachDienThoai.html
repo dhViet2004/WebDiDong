@@ -1,0 +1,303 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách điện thoại</title>
+    <link rel="icon" href="../images/icon/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/DSDT.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../js/chiTietSP.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/datajson.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../bs/bootstrap.bundle.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-xl navbar-light blue">
+        <div class="container-fluid">
+            <a class="navbar-brand thea" href="../html/home.html"><img src="../images/iconDSDT/Untitled-2.png" alt="Logo" class="w-100"></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item dropdown ms-5 w-100">
+                        <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
+                            điểm</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">TP.HCM</a></li>
+                            <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
+                            <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                        </ul>
+                    </li>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-button">
+                        <button class="btn btn-outline-primary" type="button" id="search-button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <li class="nav-item w-100">
+                      <a class="nav-link w-100" id="user" href="DangNhap.html">
+                          <i class="fa fa-user btn" aria-hidden="true"></i>
+                          <span id="htmlDangNhap">Đăng nhập</span>
+                      </a>
+                  </li>
+                  <li class="nav-item w-100">
+                      <a class="nav-link w-100" href="giohang.html">
+                          <i class="fa fa-shopping-cart btn "></i>
+                          Giỏ Hàng
+                      </a>
+                  </li>
+                </ul>
+    
+            </div>
+    
+        </div>
+    </nav>
+
+<section class="color-blue">
+      <!-- Trang chu  -->
+      <div class="row" id="thanhTrangChu">
+        <div class="col-12" style="padding-left: 25px;">
+            <a href="../html/home.html"><img id="iconHomeBlue" src="../images/iconDSDT/icon-homeXD.png" alt=""></a>
+            <h6 style="padding-left: 35px; padding-top: 6px; font-size: 13px; vertical-align: middle;"><a href="../html/home.html">Trang chủ</a> | <a href="" id="linkTrang">Iphone</a></h6>
+        </div>
+    </div>
+    
+    <!-- Chay Quang Cao -->
+    <div class="row" id="sliderQC">
+        <div class="col-6">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Chay quang cao -->
+                <div class="carousel-inner" style="margin-left: 10px;">
+                  <div class="carousel-item active" id="qc1">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc1.webp" alt="Los Angeles" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item" id="qc2">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc2.webp" alt="Chicago" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item" id="qc3">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc3.webp" alt="New York" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item" id="qc4">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc4.webp" alt="New York" class="d-block" style="width:100%">
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Chay quang cao -->
+                <div class="carousel-inner" style="margin-right: 10px; float: right;">
+                  <div class="carousel-item active" id="qc5">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc5.webp" alt="Los Angeles" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item" id="qc6">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc6.webp" alt="Chicago" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item" id="qc7">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc7.webp" alt="New York" class="d-block" style="width:100%">
+                  </div>
+                  <div class="carousel-item" id="qc8">
+                    <img src="../images/QuangCaoDSDT/Iphone/qc8.webp" alt="New York" class="d-block" style="width:100%">
+                  </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter">
+      <ul class="ul_filter justify-content-center">
+          
+          <li class="w-100 ms-5" style="margin-left: 0%;">
+              <div class="dropdown">
+                  <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                   Hãng
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><img src="../images/DanhMucSanPham/Iphone.png" alt="iphone.png"></a></li>
+                    <li><a class="dropdown-item" href="#"><img src="../images/DanhMucSanPham/Nokia.png" alt="Nokia.png"></a></li>
+                    <li><a class="dropdown-item" href="#"><img src="../images/DanhMucSanPham/Oppo.png" alt="oppo.png"></a></li>
+                    <li><a href="#" class="dropdown-item"><img src="../images/DanhMucSanPham/realme.png" alt="realme.png"></a></li>
+                    <li><a href="#" class="dropdown-item"><img src="../images/DanhMucSanPham/SamSung.png" alt="SamSung.png"></a></li>
+                    <li><a href="#" class="dropdown-item"><img src="../images/DanhMucSanPham/Vivo.png" alt="ViVo.png"></a></li>
+                    <li><a href="#" class="dropdown-item"><img src="../images/DanhMucSanPham/Xiaomi.png" alt="Xiaomi.png"></a></li>
+                  </ul>
+                </div>
+          </li>
+          <li class="w-100">
+              <div class="dropdown">
+                  <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100 filter-button" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                      Giá
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dưới 2 triệu</a></li>
+                    <li><a class="dropdown-item" href="#">Từ 2 - 4 triệu</a></li>
+                    <li><a class="dropdown-item" href="#">Từ 4 -7 triệu</a></li>
+                    <li><a class="dropdown-item" href="#">Từ 13 - 20 triệu</a></li>
+                    <li><a class="dropdown-item" href="#">Trên 20 triệu</a></li>
+                  </ul>
+                </div>
+          </li>
+          <li class="w-100">
+              <div class="dropdown">
+              <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100 filter-button" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                Nhu cầu
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Chơi game/Cấu hình cao</a></li>
+                <li><a class="dropdown-item" href="#">Pin khủng trên 5000mAh</a></li>
+                <li><a class="dropdown-item" href="#">Mỏng nhẹ</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="w-100">
+              <div class="dropdown">
+                  <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100 filter-button" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                    RAM
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">2GB</a></li>
+                    <li><a class="dropdown-item" href="#">3GB</a></li>
+                    <li><a class="dropdown-item" href="#">4GB</a></li>
+                    <li><a class="dropdown-item" href="#">6GB</a></li>
+                    <li><a class="dropdown-item" href="#">8GB</a></li>
+                    <li><a class="dropdown-item" href="#">12GB</a></li>
+                  </ul>
+                </div>
+          </li>
+          <li class="w-100">
+              <div class="dropdown">
+                  <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100 filter-button" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                    Dung lượng
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">32GB</a></li>
+                    <li><a class="dropdown-item" href="#">64GB</a></li>
+                    <li><a class="dropdown-item" href="#">128GB</a></li>
+                    <li><a class="dropdown-item" href="#">256GB</a></li>
+                  </ul>
+                </div>
+          </li>
+          <li class="w-100">
+              <div class="dropdown">
+                  <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100 filter-button" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                    Tính năng sạc
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Sạc nhanh (từ 20W)</a></li>
+                    <li><a class="dropdown-item" href="#">Sạc siêu nhanh (từ 60W)</a></li>
+                    <li><a class="dropdown-item" href="#">Sạc không dây</a></li>
+                  </ul>
+                </div>
+          </li>
+
+          <li class="w-100 me-5">
+              <div class="dropdown">
+                  <button type="button" class="btn btn-outline-light text-dark dropdown-toggle border-black w-100 filter-button" style="background-color: aliceblue;" data-bs-toggle="dropdown">
+                    Tính năng đặc biệt
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Kháng nước, bụi</a></li>
+                    <li><a class="dropdown-item" href="#">Hỗ trợ 5GB</a></li>
+                    <li><a class="dropdown-item" href="#">Bảo mật khuôn mặt 3D</a></li>
+                  </ul>
+                </div>
+              </li>
+      </ul>  
+  </div>
+
+    
+    <!-- Menu Thuong hieu -->
+    <div class="row" style="padding-top: 5px; height: 60px;" id="menuThuongHieu">
+    </div>
+
+
+    <!-- So luong san pham -->
+    <div class="danhMuc_2">
+        <ul style="padding-top: 15px;">
+            <li>Số lượng sản phẩm</li>
+            <li class="flash"><input type="checkbox" name="giaoNhanh"> <img src="../images/iconDSDT/lightning.png" alt="flash.png">Giao nhanh </li>
+            <li><input type="checkbox" name="giamGia" id="giamGia"><span style="padding-left: 10px; ">Giảm giá</span></li>
+            <li><input type="checkbox" name="moi" id="moi"><span style="padding-left: 10px; ">Mới</span></li>
+        </ul>
+        <div class="dropdown" style="padding-left: 70px;">
+            <button type="button" class="btn btn-outline-light text-dark dropdown-toggle" data-bs-toggle="dropdown" style="border: 1px solid lightgrey;">
+                Sắp theo: Nổi bật
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nổi bật</a></li>
+                <li><a class="dropdown-item" href="#">% Giảm</a></li>
+                <li><a class="dropdown-item" href="#">Giá cao đến thấp</a></li>
+                <li><a class="dropdown-item" href="#">Giá thấp đến cao</a></li>
+            </ul>
+        </div>
+    </div>
+
+<div class="row container-fluid">
+        <!-- 
+    ------------------------Danh sach san pham ----------------------- -->
+    <div class="card-container; container-fluid" id="dsDT" >
+      
+    </div>
+
+</div>
+</section>
+<!-- ---------------------Footer-------------------- -->
+<div class="row" style="padding-top: 10px;">
+    <footer class="justify-content-center d-flex blue ">
+        <div class="container">
+            <table class="w-100">
+                <tr>
+                    <th></th>
+                    <th>Tổng đài hỗ trợ</th>
+                    <th>Các trang mạng xã hội</th>
+                </tr>
+                <tr>
+                  <td class="ms-5"><a href="../html/aboutUs.html">Công ty chúng tôi</a></td>
+                  <td>Gọi mua: 1900 232 460 (7:30-22:00)</td>
+                  <td><a href="#"><img src="../images/AboutUs/facebook.png" alt="fb.png" class="login-google me-2">Facebook</a></td>
+              </tr>
+              <tr>
+                  <td><a href="../html/member.html">Thành viên công ty</a></td>
+                  <td>Thiếu nại: 1800.1062 (8:00-21:30)</td>
+                  <td><a href="#"><img src="../images/AboutUs/Google.png" alt="ins.png" class="login-google me-2">Instagram</a></td>
+              </tr>
+                <tr>
+                    <td><a href="#">Chính sách trả góp</a></td>
+                    <td>Bảo hành: 1900 232 464 (8:00-21:00)</td>
+                    <td><a href="#"><img src="../images/iconDSDT/mess.png" alt="" class="login-google me-2">Messenger</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Gửi đánh giá, góp vui</a></td>
+                    <td></td>
+                    <td><a href="#"><img src="../images/iconDSDT/youtu.png" alt="ytb.png" class="login-google me-2">Youtube</a></td>
+                </tr>
+           </table>
+        </div>
+     </footer>
+</div>
+<script src="../js/fillName.js"></script>
+</body>
+</html>

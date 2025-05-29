@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap">
+    <link rel="stylesheet" href="../css/aboutUs.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>   
+    <script src="../js/script.js"></script>
+    <script src="../bs/bootstrap.bundle.min.js"></script>
+    <title>Hóa đơn</title>
+    <link rel="icon" href="../images/icon/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-light blue">
+
+                <a class="navbar-brand thea" href="../html/home.html"><img src="../images/icon/Untitled-2.png" alt="Logo" class="w-100 ms-3"></a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item dropdown ms-5 w-100">
+                            <a class="nav-link dropdown-toggle w-50" href="#" role="button" data-bs-toggle="dropdown">Địa
+                                điểm</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">TP.HCM</a></li>
+                                <li><a class="dropdown-item" href="#">Gò Vấp</a></li>
+                                <li><a class="dropdown-item" href="#">Thủ Đức</a></li>
+                            </ul>
+                        </li>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-button">
+                            <button class="btn btn-outline-primary" type="button" id="search-button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        
+                        <li class="nav-item w-100">
+                            <a class="nav-link w-100" id="user" href="DangNhap.html">
+                                <i class="fa fa-user btn" aria-hidden="true"></i>
+                                <span id="htmlDangNhap">Đăng nhập</span>
+                            </a>
+                        </li>
+                        <li class="nav-item w-100">
+                            <a class="nav-link w-100" href="giohang.html">
+                                <i class="fa fa-shopping-cart btn "></i>
+                                Giỏ Hàng
+                            </a>
+                        </li>
+                    </ul>
+    
+                </div>
+        </nav>
+    </header>
+    <section class="container border rounded-5 mt-5 mb-5 pb-5">
+        <h1 class="d-flex justify-content-center">Chi tiết đơn hàng</h1>
+
+        <!-- Order Info -->
+        <div class="row w-100">
+            <!-- Order ID -->
+            <div class="col-6 w-50"><span class="text-muted" id="madonHang">Mã đơn hàng:</span></div>
+            <!-- <div class="col-6 d-flex justify-content-end"><button type="button" class="btn btn-success">Đã nhận được hàng</button></div> -->
+        </div>
+        <div class="row">
+            <!-- Order Date -->
+            <div class="col-6 w-100"><span class="text-muted" id="date">Ngày mua:</span></div>
+        </div>
+        <div class="row">
+            <!-- Invoice Link -->
+            <div class="col-6 w-100"><a href="#" class="link-danger">Xem hóa đơn VAT</a></div>
+        </div>
+
+        <!-- Product Info -->
+        <h1 class="text-muted">SẢN PHẨM</h1>
+        <!-- Product list goes here -->
+        <table id="giohang" class="table table-bordered">
+
+        </table>
+        <!-- Payment Info -->
+        <div class="row text-muted"><h3>Thông tin thanh toán</h3></div>
+        <div class="row text-muted"><span id="tongTien">Tổng tiền sản phẩm: </span></div>
+
+        <!-- Customer Info -->
+        <div class="row text-muted"><h3>Thông tin khách hàng</h3></div>
+        <div class="row text-muted"><span id="name">Họ tên: </span></div>
+        <div class="row text-muted"><span id="sdt">Số điện thoại: </span></div>
+        <div class="row text-muted"><span id="diaChi">Địa chỉ: </span></div>
+        <form action="" class="w-100 d-flex justify-content-center mt-5">
+            <button type="button" class="btn btn-primary w-100" id="muaHang">Tiếp tục mua hàng</button>
+        </form>
+    </section>
+<footer class="justify-content-center d-flex blue ">
+    <div class="container">
+        <table class="w-100">
+            <tr>
+                <th></th>
+                <th>Tổng đài hỗ trợ</th>
+                <th>Các trang mạng xã hội</th>
+            </tr>
+            <tr>
+                <td class="ms-5"><a href="../html/aboutUs.html">Công ty chúng tôi</a></td>
+                <td>Gọi mua: 1900 232 460 (7:30-22:00)</td>
+                <td><a href="#"><img src="../images/AboutUs/facebook.png" alt="fb.png" class="login-google me-2">Facebook</a></td>
+            </tr>
+            <tr>
+                <td><a href="../html/member.html">Thành viên công ty</a></td>
+                <td>Thiếu nại: 1800.1062 (8:00-21:30)</td>
+                <td><a href="#"><img src="../images/AboutUs/Google.png" alt="ins.png" class="login-google me-2">Instagram</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Chính sách trả góp</a></td>
+                <td>Bảo hành: 1900 232 464 (8:00-21:00)</td>
+                <td><a href="#"><img src="../images/AboutUs/mess.png" alt="" class="login-google me-2">Messenger</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Gửi đánh giá, góp vui</a></td>
+                <td></td>
+                <td><a href="#"><img src="../images/AboutUs/youtu.png" alt="ytb.png" class="login-google me-2">Youtube</a></td>
+            </tr>
+       </table>
+    </div>
+ </footer>
+</div>
+<script src="../js/fillName.js"></script>
+<script src="../js/hoadon.js"></script>
+</body>
+
+</html>
